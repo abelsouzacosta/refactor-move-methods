@@ -19,6 +19,10 @@ export function trackSummary(points: Array<Point>): Summary {
   };
 }
 
+function getPace(points: Array<Point>): number {
+  return getTotalTime(points) / 60 / getTotalDistance(points);
+}
+
 function radians(degrees: number) {
   return degrees * (Math.PI / 180);
 }
