@@ -23,7 +23,7 @@ function radians(degrees: number) {
   return degrees * (Math.PI / 180);
 }
 
-function distance(p1: Point, p2: Point): number {
+function getDistance(p1: Point, p2: Point): number {
   const EARTH_RADIUS = 3959;
   const dLat = radians(p2.lat) - radians(p1.lat);
   const dLon = radians(p2.lon) - radians(p1.lon);
@@ -45,7 +45,7 @@ function getTotalDistance(points: Array<Point>): number {
   let result = 0;
 
   for (let count = 1; count < points.length; count += 1) {
-    result += distance(points[count - 1], points[count]);
+    result += getDistance(points[count - 1], points[count]);
   }
 
   return result;
