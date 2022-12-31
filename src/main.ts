@@ -89,4 +89,8 @@ function top_calculateDistance(points: Array<Point>): number {
 
     return EARTH_RADIUS * c;
   }
+
+  function radians(degrees: number) {
+    return degrees * (Math.PI / 180);
+  }
 }
