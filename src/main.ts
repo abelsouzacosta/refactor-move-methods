@@ -17,10 +17,6 @@ export function trackSummary(points: Array<Point>): Summary {
     distance: getTotalDistance(points),
     pace,
   };
-
-  function calculateTime(): number {
-    return getTotalTime(points);
-  }
 }
 
 function getTotalDistance(points: Array<Point>): number {
