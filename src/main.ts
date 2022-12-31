@@ -62,3 +62,13 @@ export function trackSummary(points: Array<Point>): Summary {
     return degrees * (Math.PI / 180);
   }
 }
+
+function top_calculateDistance(points: Array<Point>): number {
+  let result = 0;
+
+  for (let count = 1; count < points.length; count += 1) {
+    result += distance(points[count - 1], points[count]);
+  }
+
+  return result;
+}
