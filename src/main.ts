@@ -21,7 +21,7 @@ export function trackSummary(points: Array<Point>): Summary {
   };
 
   function calculateDistance(): number {
-    return top_calculateDistance(points);
+    return getTotalDistance(points);
   }
 
   function calculateTime(): number {
@@ -57,7 +57,7 @@ export function trackSummary(points: Array<Point>): Summary {
   }
 }
 
-function top_calculateDistance(points: Array<Point>): number {
+function getTotalDistance(points: Array<Point>): number {
   let result = 0;
 
   for (let count = 1; count < points.length; count += 1) {
