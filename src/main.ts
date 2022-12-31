@@ -9,7 +9,7 @@ type Summary = {
   pace: number;
 };
 
-function trackSummary(points: Array<Point>): Summary {
+export function trackSummary(points: Array<Point>): Summary {
   let totalTime = calculateTime();
   let totalDistance = calculateDistance();
   let pace = totalTime / 60 / totalDistance;
@@ -62,18 +62,3 @@ function trackSummary(points: Array<Point>): Summary {
     return degrees * (Math.PI / 180);
   }
 }
-
-let points = [
-  {
-    lat: 12,
-    lon: 36,
-  },
-  {
-    lat: 20,
-    lon: 60,
-  },
-];
-
-let result = trackSummary(points);
-
-console.log(result);
