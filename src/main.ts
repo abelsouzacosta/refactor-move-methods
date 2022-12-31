@@ -10,11 +10,10 @@ type Summary = {
 };
 
 export function trackSummary(points: Array<Point>): Summary {
-  let totalTime = calculateTime();
-  let pace = totalTime / 60 / getTotalDistance(points);
+  let pace = getTotalTime(points) / 60 / getTotalDistance(points);
 
   return {
-    time: totalTime,
+    time: getTotalTime(points),
     distance: getTotalDistance(points),
     pace,
   };
