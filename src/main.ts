@@ -20,13 +20,7 @@ export function trackSummary(points: Array<Point>): Summary {
   };
 
   function calculateTime(): number {
-    let totalTime = 0;
-
-    for (let count = 0; count <= points.length; count += 1) {
-      totalTime += 30;
-    }
-
-    return totalTime;
+    return top_calculateTime(points);
   }
 }
 
@@ -60,4 +54,14 @@ function getTotalDistance(points: Array<Point>): number {
   function radians(degrees: number) {
     return degrees * (Math.PI / 180);
   }
+}
+
+function top_calculateTime(points: Array<Point>): number {
+  let totalTime = 0;
+
+  for (let count = 0; count <= points.length; count += 1) {
+    totalTime += 30;
+  }
+
+  return totalTime;
 }
