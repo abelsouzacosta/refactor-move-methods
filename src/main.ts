@@ -21,13 +21,7 @@ export function trackSummary(points: Array<Point>): Summary {
   };
 
   function calculateDistance(): number {
-    let result = 0;
-
-    for (let count = 1; count < points.length; count += 1) {
-      result += distance(points[count - 1], points[count]);
-    }
-
-    return result;
+    return top_calculateDistance(points);
   }
 
   function calculateTime(): number {
